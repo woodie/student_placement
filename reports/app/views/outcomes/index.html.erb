@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Outcomes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Supervisor name</th>
+      <th>Supervisor email address</th>
+      <th>Job title</th>
+      <th>Department</th>
+      <th>Start date</th>
+      <th>End date</th>
+      <th>Currently active</th>
+      <th>Salary</th>
+      <th>Pay period</th>
+      <th>Description</th>
+      <th>Employer name</th>
+      <th>Employer phone</th>
+      <th>Employer email address</th>
+      <th>Status</th>
+      <th>Offer date</th>
+      <th>Acceptance date</th>
+      <th>Offer accepted</th>
+      <th>Job type name</th>
+      <th>Employment type name</th>
+      <th>Industry name</th>
+      <th>Student</th>
+      <th>Location</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @outcomes.each do |outcome| %>
+      <tr>
+        <td><%= outcome.supervisor_name %></td>
+        <td><%= outcome.supervisor_email_address %></td>
+        <td><%= outcome.job_title %></td>
+        <td><%= outcome.department %></td>
+        <td><%= outcome.start_date %></td>
+        <td><%= outcome.end_date %></td>
+        <td><%= outcome.currently_active %></td>
+        <td><%= outcome.salary %></td>
+        <td><%= outcome.pay_period %></td>
+        <td><%= outcome.description %></td>
+        <td><%= outcome.employer_name %></td>
+        <td><%= outcome.employer_phone %></td>
+        <td><%= outcome.employer_email_address %></td>
+        <td><%= outcome.status %></td>
+        <td><%= outcome.offer_date %></td>
+        <td><%= outcome.acceptance_date %></td>
+        <td><%= outcome.offer_accepted %></td>
+        <td><%= outcome.job_type_name %></td>
+        <td><%= outcome.employment_type_name %></td>
+        <td><%= outcome.industry_name %></td>
+        <td><%= outcome.student %></td>
+        <td><%= outcome.location %></td>
+        <td><%= link_to 'Show', outcome %></td>
+        <td><%= link_to 'Edit', edit_outcome_path(outcome) %></td>
+        <td><%= link_to 'Destroy', outcome, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Outcome', new_outcome_path %>

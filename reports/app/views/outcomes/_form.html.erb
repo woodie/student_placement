@@ -1,0 +1,105 @@
+<%= form_for(@outcome) do |f| %>
+  <% if @outcome.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@outcome.errors.count, "error") %> prohibited this outcome from being saved:</h2>
+
+      <ul>
+      <% @outcome.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :supervisor_name %><br>
+    <%= f.text_field :supervisor_name %>
+  </div>
+  <div class="field">
+    <%= f.label :supervisor_email_address %><br>
+    <%= f.text_field :supervisor_email_address %>
+  </div>
+  <div class="field">
+    <%= f.label :job_title %><br>
+    <%= f.text_field :job_title %>
+  </div>
+  <div class="field">
+    <%= f.label :department %><br>
+    <%= f.text_field :department %>
+  </div>
+  <div class="field">
+    <%= f.label :start_date %><br>
+    <%= f.date_select :start_date %>
+  </div>
+  <div class="field">
+    <%= f.label :end_date %><br>
+    <%= f.date_select :end_date %>
+  </div>
+  <div class="field">
+    <%= f.label :currently_active %><br>
+    <%= f.check_box :currently_active %>
+  </div>
+  <div class="field">
+    <%= f.label :salary %><br>
+    <%= f.number_field :salary %>
+  </div>
+  <div class="field">
+    <%= f.label :pay_period %><br>
+    <%= f.text_field :pay_period %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :employer_name %><br>
+    <%= f.text_field :employer_name %>
+  </div>
+  <div class="field">
+    <%= f.label :employer_phone %><br>
+    <%= f.text_field :employer_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :employer_email_address %><br>
+    <%= f.text_field :employer_email_address %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.text_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :offer_date %><br>
+    <%= f.date_select :offer_date %>
+  </div>
+  <div class="field">
+    <%= f.label :acceptance_date %><br>
+    <%= f.date_select :acceptance_date %>
+  </div>
+  <div class="field">
+    <%= f.label :offer_accepted %><br>
+    <%= f.date_select :offer_accepted %>
+  </div>
+  <div class="field">
+    <%= f.label :job_type_name %><br>
+    <%= f.text_field :job_type_name %>
+  </div>
+  <div class="field">
+    <%= f.label :employment_type_name %><br>
+    <%= f.text_field :employment_type_name %>
+  </div>
+  <div class="field">
+    <%= f.label :industry_name %><br>
+    <%= f.text_field :industry_name %>
+  </div>
+  <div class="field">
+    <%= f.label :student_id %><br>
+    <%= f.text_field :student_id %>
+  </div>
+  <div class="field">
+    <%= f.label :location_id %><br>
+    <%= f.text_field :location_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

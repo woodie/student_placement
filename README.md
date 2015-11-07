@@ -20,3 +20,18 @@ bundle install
 rails g rspec:install
 ```
 
+Generate Scaffold
+```bash
+rails g scaffold location name:string zipcode:integer city:string state:string country:string
+
+rails g scaffold student email_address:string username:string \
+  first_name:string middle_name:string last_name:string ethnicity:string
+
+rails g scaffold outcome supervisor_name:string supervisor_email_address:string \
+  job_title:string department:string start_date:date end_date:date currently_active:boolean \
+  salary:integer pay_period:string description:text employer_name:string employer_phone:string \
+  employer_email_address:string status:string offer_date:date acceptance_date:date \
+  offer_accepted:date job_type_name:string employment_type_name:string industry_name:string \
+  student:references location:references
+```
+
